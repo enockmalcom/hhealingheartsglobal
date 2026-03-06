@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Healing Hearts Global</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #ffffff; --text: #333; --accent: #27AE60; --card: #f9f9f9; }
+        .dark-theme { --bg: #121212; --text: #e0e0e0; --accent: #2ecc71; --card: #1e1e1e; }
+        .green-theme { --bg: #e8f5e9; --text: #1b5e20; --accent: #2e7d32; --card: #c8e6c9; }
+
+        body { margin: 0; height: 100vh; width: 100vw; background-color: var(--bg); color: var(--text); font-family: 'Montserrat', sans-serif; overflow: hidden; transition: 0.3s; }
+        .overlay { width: 100vw; height: 100vh; display: flex; flex-direction: column; padding: 20px; box-sizing: border-box; }
+        .scroll-area { flex-grow: 1; overflow-y: auto; padding-bottom: 150px; }
+        
+        h1 { font-family: 'Playfair Display', serif; color: var(--accent); font-size: 1.6em; margin-bottom: 15px; }
+        h2 { color: var(--accent); font-size: 1.1em; border-bottom: 2px solid var(--accent); padding-bottom: 5px; margin-top: 25px; }
+        p { line-height: 1.8; font-size: 0.9em; margin-bottom: 15px; }
+        ul { font-size: 0.9em; line-height: 1.6; margin-bottom: 20px; padding-left: 20px; }
+        
+        .theme-select { margin-bottom: 15px; text-align: center; }
+        .theme-select button { padding: 5px 12px; border-radius: 5px; border: 1px solid var(--accent); background: var(--bg); color: var(--text); cursor: pointer; font-size: 0.6em; }
+        
+        .cta-btn { display: block; background: var(--accent); color: white; text-align: center; padding: 15px; text-decoration: none; font-weight: 700; border-radius: 10px; margin: 20px 0; }
+        .nav { position: fixed; bottom: 0; left: 0; width: 100%; display: grid; grid-template-columns: repeat(5, 1fr); background: var(--bg); border-top: 1px solid #ddd; padding: 5px 0; }
+        .nav button { background: none; border: none; color: var(--text); font-weight: 700; font-size: 0.45em; text-transform: uppercase; cursor: pointer; padding: 10px; }
+        .content { display: none; }
+        .active { display: block; }
+    </style>
+</head>
+<body id="body">
+
+<div class="overlay">
+    <div class="theme-select">
+        <button onclick="setTheme('')">White</button>
+        <button onclick="setTheme('dark-theme')">Dark</button>
+        <button onclick="setTheme('green-theme')">Green</button>
+    </div>
+
+    <div class="scroll-area">
+        <div id="home" class="content active">
+            <h1>Healing Hearts Global</h1>
+            <p>Welcome to our sanctuary. We are a faith-based collective committed to restoring hope, providing comfort, and fostering resilience among those navigating life's most challenging seasons.</p>
+            <h2>Our Foundation</h2>
+            <p>We operate on the belief that no one should suffer in silence. Our organization focuses on spiritual grounding, empathetic dialogue, and the power of communal prayer.</p>
+            <h2>Why Your Journey Matters</h2>
+            <p>Every person carries a story. Our purpose is to provide a safe harbor where that story is validated, heard, and supported. Whether you are dealing with grief, spiritual dryness, or the weight of daily burdens, you are invited to grow with us.</p>
+        </div>
+
+        <div id="mission" class="content">
+            <h1>Our Mission</h1>
+            <p>To bridge the gap between isolation and community through faith-based restoration and proactive emotional support.</p>
+            <h2>The Pillars of Our Service</h2>
+            <ul>
+                <li><b>Daily Encouragement:</b> We provide daily reflections to help you center your thoughts on peace and resilience.</li>
+                <li><b>Community Wisdom:</b> We foster an environment where members exchange life lessons, providing mutual strength.</li>
+                <li><b>Confidential Listening:</b> Your voice is honored. We provide a space where you can be honest without fear of judgment.</li>
+                <li><b>Faith-Based Workshops:</b> Regular guided sessions focused on applying scriptural wisdom to modern-day challenges like anxiety, forgiveness, and healing.</li>
+            </ul>
+        </div>
+
+        <div id="impact" class="content">
+            <h1>Voices of Healing</h1>
+            <p>The strength of our community is best seen in the lives of those we serve. Our members find that healing is a shared experience.</p>
+            <p><i>"I finally found the peace I was searching for in this community."</i> — Sarah</p>
+            <p><i>"This group is the highlight of my day. I no longer feel isolated in my journey."</i> — Mark</p>
+            <p><i>"The workshops gave me practical tools to handle my stress."</i> — Elena</p>
+            <h2>Our Goal</h2>
+            <p>We aim to reach everyone who feels forgotten, reminding them that they are seen, loved, and capable of a new beginning.</p>
+        </div>
+
+        <div id="join" class="content">
+            <h1>Join Our Circle</h1>
+            <p>Entering our community is a commitment to your own well-being. By joining, you gain access to a network of individuals dedicated to mutual growth.</p>
+            <h2>What To Expect</h2>
+            <p>Upon joining, you will be part of a private group where we share prayers, reflections, and encouragement. You are welcome to participate actively or simply read and absorb the positive energy of the circle.</p>
+            <p>We value your privacy and maintain strict community standards of kindness, respect, and mutual support.</p>
+        </div>
+
+        <div id="contact" class="content">
+            <h1>Contact Us</h1>
+            <p>We are here for you. If you have questions, need a private conversation, or want to join our circle, please reach out.</p>
+            <h2>Direct Connection</h2>
+            <p>WhatsApp: +256 772 299783</p>
+            <p>Email: muyonjaandrew3@gmail.com</p>
+            <a href="https://wa.me/256772299783" class="cta-btn">TAP TO WHATSAPP</a>
+            <a href="mailto:muyonjaandrew3@gmail.com" class="cta-btn" style="background:#555;">SEND EMAIL</a>
+        </div>
+    </div>
+
+    <div class="nav">
+        <button onclick="showPage('home')">Home</button>
+        <button onclick="showPage('mission')">Mission</button>
+        <button onclick="showPage('impact')">Impact</button>
+        <button onclick="showPage('join')">Join</button>
+        <button onclick="showPage('contact')">Contact</button>
+    </div>
+</div>
+
+<script>
+    function showPage(pageId) {
+        document.querySelectorAll('.content').forEach(c => c.style.display = 'none');
+        document.getElementById(pageId).style.display = 'block';
+    }
+    function setTheme(theme) {
+        document.getElementById('body').className = theme;
+    }
+</script>
+</body>
+</html>
